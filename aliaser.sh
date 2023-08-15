@@ -90,8 +90,8 @@ if [[ $shell = "zsh" ]]; then
 elif [[ $shell = "bash" ]]; then
   conditional=$(grep " -f .~/.aliases" ~/.bashrc)
   if [[ $conditional = "" ]]; then
-    echo "if [ -f .~/.aliases ]; then
-  .~/.aliases
+    echo "if [ -f ~/.aliases ]; then
+  source ~/.aliases
 fi" >> ~/.bashrc
   echo "${GREEN}.aliases adicionado ao ~/.bashrc${stop_color}"
   fi
