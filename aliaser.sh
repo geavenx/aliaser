@@ -6,9 +6,9 @@ GREEN=$(tput setaf 2)
 stop_color=$'\e[m'
 
 
-if [[ $SHELL = "/bin/zsh" ]]; then
+if [[ $SHELL = "/bin/zsh" || $SHELL = "/usr/bin/zsh" ]]; then
   export shell="zsh"
-elif [[ $SHELL = "/bin/bash" ]]; then
+elif [[ $SHELL = "/bin/bash" || $SHELL = "/usr/bin/bash" ]]; then
   export shell="bash"
 else
   echo "Shell não identificado."
