@@ -97,7 +97,7 @@ fi" >> ~/.bashrc
   fi
 fi 
 
-repeatedAlias=$(tail -n +2 ~/.aliases | grep "$newAliasName")
+repeatedAlias=$(tail -n +2 ~/.aliases | grep "alias $newAliasName=")
 if [[ $repeatedAlias != "" ]]; then
   echo "Esse alias já existe!
   "
